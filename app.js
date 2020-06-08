@@ -31,6 +31,13 @@ app.use(express.urlencoded({
   extended: false
 }));
 
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // Serve Static Files
 app.use(express.static(path.join(__dirname, 'public')));
 
