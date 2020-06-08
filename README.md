@@ -17,7 +17,7 @@ npm install
 
 ### To Run
 ```
-nodemon app.js
+nodemon start OR npm start
 ```
 
 Code is Running on 
