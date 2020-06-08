@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostList</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- Google Font CDN -->
+  <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
+
+<body>
+
+  <!-- navbar start -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand font-weight-bold text-warning" href="#">Blog Post App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link zoom" href="./adminpannel.html">Home</a>
+        </li>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link zoom" href="./userlist.html">UserList</a>
+        </li>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active zoom" href="./postlist.html">PostList</a>
+        </li>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link zoom" href="./chart.html">Chart</a>
+        </li>
+        </li>
+      </ul>
+      <button type="button" class="btn btn-outline-warning mx-2">
+        Admin
+      </button>
+    </div>
+  </nav>
+
+  <!-- navbar end  -->
+
+
+
+  <!-- main headin start -->
+  <h1 class="heading"><u>Post List</u></h1>
+  <!-- main headin end -->
+
+  <!-- form start(for choosing sorting options) -->
+  <div class="container mb-5">
+    <form>
+      <div class="form-row align-items-center">
+        <div class="col-auto my-1">
+          <label class="mr-sm-2 font-weight-bold font-italic" for="inlineFormCustomSelect">Sort And Filter Post
+            List</label>
+          <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option value="comments">Sort By Number Of Comments</option>
+            <option value="likes">Sort By Number Of Likes</option>
+            <option value="last12hrs">Filter Last 12 hrs Posts</option>
+            <option value="lastday">Filter Last Day Posts</option>
+            <option value="last3days">Filter Last 3 Days Posts</option>
+            <option value="lastweek">Filter Last Week Posts</option>
+            <option value="lastmonth">Filter Last Month Posts</option>
+          </select>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- form end(for choosing sorting options) -->
+
+  <!-- filter post using time range start-->
+  <form class="border bg-secondary text-white rounded p-2">
+    <label class="mr-sm-2 font-weight-bold font-italic">Dynamic Time Range</label>
+    <div>
+      <label for="startDate">Starting Date :- </label>
+      <input type="date" id="startDate">
+    </div>
+    <div>
+      <label for="endDate">Ending Date :- </label>
+      <input type="date" id="endDate">
+    </div>
+    <button type="button" id="filter" class="btn btn-primary m-3">Filter Posts</button>
+  </form>
+  </div>
+  <!-- filter post using time range end-->
+
+  <!-- Display post data Dynamically -->
+  <div class="container">
+    <div id="postsdata"></div>
+  </div>
+
+  <!-- paginations UI -->
+  <ul class="pagination pagination-sm justify-content-center" id="paginationNumber">
+  </ul>
+
+  <script src="./javascripts/getPostList.js"></script>
+  <script src="./javascripts/getSortPostList.js"></script>
+  <script src="./javascripts/getTimeRangePostList.js"></script>
+</body>
+
+</html>

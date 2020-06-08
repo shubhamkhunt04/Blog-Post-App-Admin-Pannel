@@ -1,0 +1,39 @@
+body {
+  padding: 50px;
+  font-family: "Muli", sans-serif;
+  background-color: linen;
+}
+
+/*================ Navbar Animation ============== */
+.zoom {
+  transition: transform 0.2s;
+  /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+}
+
+/*================ Navbar Position ============== */
+
+/* main Heading */
+.heading {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/*================ Form Position ============== */
+form {
+  margin: 0 auto;
+  width: 450px;
+}
+
+/*================ Card Style ============== */
+.container .cardStyle {
+  padding: 30px;
+  width: 25rem;
+  margin: 30px auto;
+  float: none;
+  margin-bottom: 10px;
+}
